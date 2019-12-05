@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="Description"
+          content="Sleepwalker is a website for showcasing Seth Hunt's personal portfolio that includes: sketches, finsihed prints, and products that can be ordered.">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="order.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script>
+    <![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<div id="wrapper">
+    <header>
+    </header>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Sketchbook
+            </button>
+            <div class="dropdown-content">
+                <a href="HXCsketch.html">HXC</a>
+                <a href="PWSHsketch.html">PWSH</a>
+                <a href="Dollsketch.html">Dolls</a>
+                <a href="Randomsketch.html">Random</a>
+            </div>
+        </div>
+        <a href="prints.html">Prints</a>
+        <div class="dropdown">
+            <button class="dropbtn">SDEV250
+            </button>
+            <div class="dropdown-content">
+                <a href="order.html">Order</a>
+                <a href="countdown.html">Calendar</a>
+                <a href="table.html">DOM</a>
+                <a href="select_array.html">Array</a>
+                <a href="map.html">Map</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <article>
+            <div id="errorText"></div>
+            <form id="estimateform">
+                <fieldset id="orderform">
+                    <input type="number" min="0" max="4" id="printnum" value="1"/>
+                    <label for="printnum">
+                        <p>How many prints? ($50 each):</p>
+                    </label>
+
+                    <input type="number" min="2" id="commission" value="2"/>
+                    <label for="commission">
+                        <p>How many commission pieces? ($200 each): </p>
+                    </label>
+
+                    <input type="checkbox" id="artbook"/>
+                    <label for="artbook">
+                        <p>Collection book</p>
+                        <p>$300</p>
+                    </label>
+
+                    <input type="checkbox" id="reprodrights"/>
+                    <label for="reprodrights">
+                        <p>Reproduction rights for all commissions</p>
+                        <p>$2000</p>
+                    </label>
+                    <div class="errorMessage"></div>
+                </fieldset>
+
+            </form>
+        </article>
+        <aside>
+
+            <p>Total Estimate: <span id="estimate"></span></p><br>
+            <div class="details">
+                <fieldset id = "cusinfo">
+                                <label for="myName">*Name:</label><br><br>
+                                <input type="text" name="myName" id="myName" required="required" placeholder="your first and last name"><br><br>
+                                <label for="myEmail">*E-mail:</label><br><br>
+                                <input type="email" name="myEmail" id="myEmail" required="required" placeholder="your Email"><br>
+
+                                <input id="mySubmit" type="submit" value="Order Now">
+                    <div class="errorMessage"></div>
+
+                </fieldset>
+
+                        </div>
+        </aside>
+
+    </main>
+
+
+
+    <footer>
+       <p> Contact Me @ <a href="tel:888-555-5555">888-555-5555</a> or  <a href="mailto:shunt84@ivytech.edu">Seth@Hunt.com</a><br>
+        <!--        <span id="desktop">888-555-5555</span>-->
+        Copyright &copy; 2018 SleepWalker INC.</p>
+        <div id="social">
+            <ul>
+                <li><a href="https://www.facebook.com/seth.hunt.5686"><img src="facebook-logo-png-38356-2.png"
+                                                                           width="40" height="40"
+                                                                           alt="Like Me on FaceBook!"></a><br>Like
+                </li>
+                <li><a href="https://www.instagram.com/shunt9437/"><img src="instagramlogo.png" width="40" height="40"
+                                                                        alt="Like Me on Instagram!"></a><br>Follow
+                </li>
+                <li><a href="https://www.linkedin.com/in/seth-hunt-716938164"><img src="images/linkedin.jpg" width="40"
+                                                                                   height="40"
+                                                                                   alt="Like Me on LinkedIN!"></a><br>Follow
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+<script src="order.js"></script>
+</body>
+</html>

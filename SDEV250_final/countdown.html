@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="Description"
+          content="Sleepwalker is a website for showcasing Seth Hunt's personal portfolio that includes: sketches, finsihed prints, and products that can be ordered.">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Seth Hunt's Protfolio</title>
+    <link rel="stylesheet" href="final.css">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script>
+    <![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        td{
+            color: black;
+        }
+
+        article {
+            padding: 20px 20px 40px;
+            background: black;
+            margin-top: 10px;
+            position: relative;
+        }
+        article h2 {
+            font-size: 36pt;
+            font-family: "Racing Sans One", garamond, "times new roman", times, serif;
+            color: rgb(46,49,146);
+        }
+        article h3 {
+            font-size: 24pt;
+            font-family: "Racing Sans One", garamond, "times new roman", times, serif;
+            color: rgb(46,49,146);
+        }
+        article h4 {
+            /*font-size: 14pt;*/
+            /*font-family: roboto, arial, helvetica, sans-serif;*/
+            color: white;
+            margin-top: 10px;
+        }
+        /* ticket section */
+        #ticket {
+            float: right;
+            width: 380px;
+            border: 1px solid black;
+            background: white;
+            padding: 20px;
+            -moz-border-radius-topleft: 10px;
+            -webkit-border-top-left-radius: 10px;
+            border-top-left-radius: 10px;
+            -moz-border-radius-topright: 10px;
+            -webkit-border-top-right-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        #ticket, #dateSection, #passengersSection, #countdownSection {
+            display: none;
+
+        }
+
+        #ticket li, #ticket p {
+            text-indent: 1em;
+            margin-top: 5px;
+        }
+
+        #countdown {
+            font-weight: bold;
+            font-size: 40px;
+            float: right;
+        }
+
+        /* form */
+        form {
+            width: 380px;
+        }
+
+        fieldset {
+            position: relative;
+            padding: 5px 30px 30px;
+            margin: 0 15px 25px;
+            border: none;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 24px;
+            position: absolute;
+            padding: 10px 0;
+        }
+
+        input, label {
+            position: relative;
+            top: 50px;
+            line-height: 1.2em;
+            display: block;
+        }
+
+        fieldset.checks input {
+            float: left;
+            clear: left;
+            margin-right: 5px;
+        }
+
+        fieldset.checks label {
+            line-height: 1.2em;
+            margin-bottom: 4px;
+        }
+
+        fieldset.text label {
+            width: 6em;
+            text-align: right;
+            float: left;
+            clear: left;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        fieldset.text input {
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+
+        #addName {
+            margin-left: 9.5em;
+        }
+
+        /* calendar */
+        #cal {
+            display: none;
+            position: absolute;
+            left: 230px;
+            top: 65px;
+            background: black;
+            color: white;
+            padding: 10px;
+            -moz-border-radius-topleft: 10px;
+            -webkit-border-top-left-radius: 10px;
+            border-top-left-radius: 10px;
+            -moz-border-radius-topright: 10px;
+            -webkit-border-top-right-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        #cal table {
+            clear: both;
+        }
+
+        #cal table caption {
+            font-weight: bold;
+            font-size: 14pt;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: red;
+        }
+
+        #cal table th {
+            text-align: right;
+        }
+
+        #cal table th, #cal table td {
+            width: 2em;
+            padding: 4px;
+        }
+
+        #cal table td {
+            color: rgb(178,184,183);
+            text-align: right;
+            cursor: pointer;
+        }
+
+        #prev {
+            float: left;
+            padding: 4px;
+            cursor: pointer;
+        }
+
+        #next {
+            float: right;
+            padding: 4px;
+            cursor: pointer;
+        }
+
+        #cal table td.futuredate {
+            color: black;
+        }
+
+        #cal table td.futuredate:hover, #prev:hover, #next:hover, #close:hover {
+            background: yellow;
+            color: black;
+        }
+
+        #close {
+            color: white;
+            float: right;
+            padding: 0 4px;
+            cursor: pointer;
+        }
+
+        #close span {
+            font-size: 20pt;
+        }
+    </style>
+
+</head>
+
+<body>
+<header>
+</header>
+<div id="wrapper">
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Sketchbook
+            </button>
+            <div class="dropdown-content">
+                <a href="HXCsketch.html">HXC</a>
+                <a href="PWSHsketch.html">PWSH</a>
+                <a href="Dollsketch.html">Dolls</a>
+                <a href="Randomsketch.html">Random</a>
+            </div>
+        </div>
+        <a href="prints.html">Prints</a>
+        <div class="dropdown">
+            <button class="dropbtn">SDEV250
+            </button>
+            <div class="dropdown-content">
+                <a href="order.html">Order</a>
+                <a href="countdown.html">Calendar</a>
+                <a href="table.html">DOM</a>
+                <a href="select_array.html">Array</a>
+                <a href="map.html">Map</a>
+            </div>
+        </div>
+    </div>
+
+<article>
+    <fieldset>
+        <legend>Pick a date</legend>
+        <input type="text" id="tripDate" />
+    </fieldset>
+        <div id="dateSection">
+            <p id="selectedDate"></p>
+        </div>
+    <div id="countdownSection">
+        <table>
+            <thead><h1>Countdown to Date</h1></thead>
+            <tr>
+                <th>Years</th>
+                <th>Months</th>
+                <th>Days</th>
+                <th>Hours</th>
+                <th>Minutes</th>
+                <th>Seconds</th>
+            </tr>
+            <tr>
+                <td id="year"></td>
+                <td id="months"></td>
+                <td id="days"></td>
+                <td id="hours"></td>
+                <td id="minutes"></td>
+                <td id="seconds"></td>
+            </tr>
+        </table>
+
+    </div>
+    </section>
+    <form>
+
+
+    </form>
+    <div id="cal">
+        <div id="prev">&lt; previous</div>
+        <div id="next">next &gt;</div>
+        <table>
+            <caption></caption>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <p id="close">close <span>&#9746;</span></p>
+    </div>
+</article>
+    <footer>
+        Contact Me @ <a href="tel:888-555-5555">888-555-5555</a> or  <a href="mailto:shunt84@ivytech.edu">Seth@Hunt.com</a><br>
+        Copyright &copy; 2018 SleepWalker INC.
+        <div id="social">
+            <ul>
+                <li><a href="https://www.facebook.com/seth.hunt.5686"><img src="facebook-logo-png-38356-2.png"
+                                                                           width="40" height="40"
+                                                                           alt="Like Me on FaceBook!"></a><br>Like
+                </li>
+                <li><a href="https://www.instagram.com/shunt9437/"><img src="instagramlogo.png" width="40" height="40"
+                                                                        alt="Like Me on Instagram!"></a><br>Follow
+                </li>
+                <li><a href="https://www.linkedin.com/in/seth-hunt-716938164"><img src="images/linkedin.jpg" width="40"
+                                                                                   height="40"
+                                                                                   alt="Like Me on LinkedIN!"></a><br>Follow
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<script src="countdown.js"></script>
+</body>
+</html>

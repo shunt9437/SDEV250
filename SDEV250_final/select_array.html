@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="Description"
+          content="Sleepwalker is a website for showcasing Seth Hunt's personal portfolio that includes: sketches, finsihed prints, and products that can be ordered.">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Select Array</title>
+    <link rel="stylesheet" href="final.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script>
+    <script src="modernizr.custom.65897.js"></script>
+    <![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <style>
+
+        /* main content */
+        article {
+            /*padding: 20px 20px 40px;*/
+            background: black;
+            position: relative;
+            overflow: hidden;
+            /*padding-top: auto;*/
+        }
+
+        article h2 {
+            font-size: 32px;
+            text-align: left;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            float: left;
+        }
+
+        article div.results {
+            color: white;
+            float: right;
+            clear: right    ;
+            background: black;
+            padding-right: 300px;
+            display: inline-block;
+        }
+
+        article div.results h2{
+
+        }
+
+        /* form */
+        form {
+            width: 75%;
+
+        }
+
+         fieldset.checks {
+            padding: 5px;
+            width: 25%;
+            float: left;
+        }
+
+        #fs1 {
+            clear: left;
+            border: none;
+        }
+
+
+        legend {
+            font-weight: 700;
+            font-size: 18px;
+            text-align: left;
+            padding-left: 1.4em;
+            margin-bottom: 0.5em;
+        }
+
+        input, label {
+            line-height: 1.2em;
+            display: block;
+        }
+
+        fieldset.checks legend {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        fieldset.checks input, fieldset.checks textarea {
+            float: right;
+            clear: right;
+            margin-right: 5px;
+
+            font-size: 18px;
+        }
+
+
+        fieldset.checks label {
+            line-height: 1.2em;
+            margin-bottom: 4px;
+        }
+
+        input[type=submit] {
+            margin: 15px auto 0;
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            background: black;
+            border: white;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            float: left;
+        }
+
+      div.results  ul li{
+          display: block;
+            font-size: 25px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="wrapper">
+    <header>
+    </header>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Sketchbook
+            </button>
+            <div class="dropdown-content">
+                <a href="HXCsketch.html">HXC</a>
+                <a href="PWSHsketch.html">PWSH</a>
+                <a href="Dollsketch.html">Dolls</a>
+                <a href="Randomsketch.html">Random</a>
+            </div>
+        </div>
+        <a href="prints.html">Prints</a>
+        <div class="dropdown">
+            <button class="dropbtn">SDEV250
+            </button>
+            <div class="dropdown-content">
+                <a href="order.html">Order</a>
+                <a href="countdown.html">Calendar</a>
+                <a href="table.html">DOM</a>
+                <a href="select_array.html">Array</a>
+                <a href="map.html">Map</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+
+        <article>
+
+            <h2>Make a selection</h2>
+            <form autocomplete="on">
+                <fieldset class="checks" id="fs1">
+                    <label for="name">Name</label>
+                    <input type="checkbox" id="name" name="name"/>
+                    <label for="email">Email</label>
+                    <input type="checkbox" id="email" name="email"/>
+                    <label for="phone">Phone</label>
+                    <input type="checkbox" id="phone" name="phone"/>
+                    <label for="artbook">ArtBook</label>
+                    <input type="checkbox" id="artbook" name="artbook"/>
+                    <label for="commish">Commission</label>
+                    <input type="checkbox" id="commish" name="commish"/>
+                    <label for="rights">Rights</label>
+                    <input type="checkbox" id="rights" name="rights"/>
+                    <input type="submit" id="mySubmit" value="Submit"/>
+                </fieldset>
+                <div class="results">
+                    <h2>You entered</h2>
+                    <ul id="myList"></ul>
+                </div>
+            </form>
+
+        </article>
+
+
+
+    </main>
+    <form>
+        <input type="hidden" id="hname" name="name"/>
+        <input type="hidden" id="hemail" name="email"/>
+        <input type="hidden" id="hbook" name="art book"/>
+        <input type="hidden" id="hrights" name="reproduction rights"/>
+        <input type="hidden" id="hprints" name="prints"/>
+        <input type="hidden" id="hcommish" name="commission"/>
+    </form>
+
+
+
+        <footer>
+            Contact Me @ <a href="tel:888-555-5555">888-555-5555</a> or  <a href="mailto:shunt84@ivytech.edu">Seth@Hunt.com</a><br>
+            <!--        <span id="desktop">888-555-5555</span>-->
+            Copyright &copy; 2018 SleepWalker INC.
+            <div id="social">
+                <ul>
+                    <li><a href="https://www.facebook.com/seth.hunt.5686"><img src="facebook-logo-png-38356-2.png"
+                                                                               width="40" height="40"
+                                                                               alt="Like Me on FaceBook!"></a><br>Like
+                    </li>
+                    <li><a href="https://www.instagram.com/shunt9437/"><img src="instagramlogo.png" width="40" height="40"
+                                                                            alt="Like Me on Instagram!"></a><br>Follow
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/seth-hunt-716938164"><img src="images/linkedin.jpg" width="40"
+                                                                                       height="40"
+                                                                                       alt="Like Me on LinkedIN!"></a><br>Follow
+                    </li>
+                </ul>
+            </div>
+        </footer>
+</div>
+
+<script src="select_array.js"></script>
+</body>
+</html>
